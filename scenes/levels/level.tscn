@@ -10,7 +10,7 @@
 texture = ExtResource("1_74fe1")
 
 [node name="Player" parent="." instance=ExtResource("2_i8kjx")]
-position = Vector2(190, 157)
+position = Vector2(94, 335)
 
 [node name="Car" type="Sprite2D" parent="."]
 position = Vector2(493, 99)
