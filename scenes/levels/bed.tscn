@@ -7,22 +7,23 @@
 [node name="Bed" type="Node2D"]
 scale = Vector2(0.5, 0.5)
 
-[node name="sprite_bed" type="Sprite2D" parent="."]
+[node name="Bed" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_14rw0")
 
-[node name="big_pillow" type="Sprite2D" parent="."]
-position = Vector2(116, -3)
+[node name="PillowBig" type="Sprite2D" parent="."]
+position = Vector2(118, -2)
+rotation = 3.14159
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_x6s3e")
 
-[node name="small_pillow" type="Sprite2D" parent="."]
+[node name="PillowSmall" type="Sprite2D" parent="."]
 position = Vector2(-10, 54)
 rotation = 1.67552
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_agwqj")
 
-[node name="small_pillow2" type="Sprite2D" parent="."]
+[node name="PillowSmall2" type="Sprite2D" parent="."]
 position = Vector2(9, -58)
 rotation = 1.55509
 scale = Vector2(0.5, 0.5)
