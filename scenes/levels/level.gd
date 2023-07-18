@@ -16,6 +16,5 @@ func _process(delta):
 #	$Logo.position.x += speed
 #	if $Logo.position.x > pix:
 #		$Logo.position.x = 0
-	if Input.is_action_pressed("left"):
-		position = Vector2.AXIS_X
+	
 #
