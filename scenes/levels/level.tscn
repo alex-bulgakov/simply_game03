@@ -15,3 +15,5 @@ position = Vector2(585, 380)
 scale = Vector2(0.5, 0.5)
 
 [connection signal="player_entered_gate" from="Gate" to="." method="_on_gate_player_entered_gate"]
+[connection signal="grenade" from="Player" to="." method="_on_player_grenade"]
+[connection signal="laser" from="Player" to="." method="_on_player_laser"]
