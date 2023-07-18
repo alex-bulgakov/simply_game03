@@ -7,10 +7,11 @@ func _on_gate_player_entered_gate(body):
 	print("recive signal entered gate from gate ")
 	print(body)
 
-func _on_player_laser(pos, dir):
+func _on_player_laser(pos, direction):
 	var las = laser_scene.instantiate() as Area2D
 	las.position = pos
-	las.direction = dir
+	las.rotation = direction.angle()
+	las.direction = direction
 	$Projectiles.add_child(las)
 
 

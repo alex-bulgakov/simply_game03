@@ -1,7 +1,7 @@
 extends Area2D
 
 @export var speed: int = 1000
-##var direction: Vector2 = look_at(get_global_mouse_position())
+var direction: Vector2 = Vector2.UP
 #
-#func _process(delta):
-#	position += direction * speed * delta
+func _process(delta):
+	position += direction * speed * delta
