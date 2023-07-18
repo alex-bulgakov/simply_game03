@@ -11,8 +11,10 @@ script = ExtResource("1_xcr6i")
 position = Vector2(525, -511)
 
 [node name="Player" parent="." instance=ExtResource("4_3o245")]
-position = Vector2(585, 380)
+position = Vector2(584, 380)
 scale = Vector2(0.5, 0.5)
+
+[node name="Projectiles" type="Node2D" parent="."]
 
 [connection signal="player_entered_gate" from="Gate" to="." method="_on_gate_player_entered_gate"]
 [connection signal="grenade" from="Player" to="." method="_on_player_grenade"]
