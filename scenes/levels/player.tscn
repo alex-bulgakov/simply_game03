@@ -11,3 +11,14 @@ texture = ExtResource("1_rqas7")
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-63, 24, -46, 86, -5, 103, 62, 74, 63, 32, 43, -10, 55, -26, 55, -61, 38, -77, 36, -97, 2, -100, -17, -45, -35, -14)
+
+[node name="TimerLaser" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="TimerGrenade" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="TimerLaser" to="." method="_on_timer_laser_timeout"]
+[connection signal="timeout" from="TimerGrenade" to="." method="_on_timer_grenade_timeout"]
