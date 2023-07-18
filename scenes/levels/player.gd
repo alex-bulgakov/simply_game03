@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 const speed: int = 300
 
-func _process(delta):
+func _process(_delta):
 	# input
 	var direction = Input.get_vector("left", "right", "up", "down")
 	
@@ -16,6 +16,3 @@ func _process(delta):
 		
 	if Input.is_action_pressed("secondary action"):
 		print("shoot granade")
-	
-	
-		

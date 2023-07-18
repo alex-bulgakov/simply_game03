@@ -1,11 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://3irlp0uokpfs"]
+[gd_scene load_steps=3 format=3 uid="uid://3irlp0uokpfs"]
 
 [ext_resource type="Script" path="res://scenes/levels/player.gd" id="1_lmvap"]
 [ext_resource type="Texture2D" uid="uid://bk3r2q6ox1mao" path="res://resources/graphics/player/player.png" id="1_rqas7"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ogh40"]
-radius = 68.0
-height = 202.0
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_lmvap")
@@ -13,5 +9,5 @@ script = ExtResource("1_lmvap")
 [node name="Player_sprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_rqas7")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_ogh40")
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-63, 24, -46, 86, -5, 103, 62, 74, 63, 32, 43, -10, 55, -26, 55, -61, 38, -77, 36, -97, 2, -100, -17, -45, -35, -14)
