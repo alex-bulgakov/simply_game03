@@ -7,9 +7,11 @@
 script = ExtResource("1_lmvap")
 
 [node name="Player_sprite" type="Sprite2D" parent="."]
+rotation = 1.5708
 texture = ExtResource("1_rqas7")
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+rotation = 1.5708
 polygon = PackedVector2Array(-63, 24, -46, 86, -5, 103, 62, 74, 63, 32, 43, -10, 55, -26, 55, -61, 38, -77, 36, -97, 2, -100, -17, -45, -35, -14)
 
 [node name="TimerLaser" type="Timer" parent="."]
@@ -23,13 +25,13 @@ autostart = true
 [node name="LaserStartPositions" type="Node2D" parent="."]
 
 [node name="Marker2D" type="Marker2D" parent="LaserStartPositions"]
-position = Vector2(19, -93)
+position = Vector2(93, 21)
 
 [node name="Marker2D2" type="Marker2D" parent="LaserStartPositions"]
-position = Vector2(28, -91)
+position = Vector2(90, 30)
 
 [node name="Marker2D3" type="Marker2D" parent="LaserStartPositions"]
-position = Vector2(11, -91)
+position = Vector2(91, 11)
 
 [connection signal="timeout" from="TimerLaser" to="." method="_on_timer_laser_timeout"]
 [connection signal="timeout" from="TimerGrenade" to="." method="_on_timer_grenade_timeout"]
