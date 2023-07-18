@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-signal laser(position)
+signal laser(position, direction)
 signal grenade(position, direction)
 
 var can_laser: bool = true
@@ -16,6 +16,7 @@ func _process(_delta):
 	velocity = direction * speed
 	move_and_slide()
 	
+	look_at(get_global_mouse_position())
 	# rotate
 	
 	var player_direction = (get_global_mouse_position() - position).normalized()
@@ -31,6 +32,8 @@ func _process(_delta):
 		var pos = $LaserStartPositions.get_children()[0].global_position	
 		grenade.emit(pos, player_direction)
 		can_grenade = false
+		
+	
 
 func _on_timer_laser_timeout():
 	can_laser = true
