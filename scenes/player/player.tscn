@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://3irlp0uokpfs"]
 
-[ext_resource type="Script" path="res://scenes/levels/player.gd" id="1_lmvap"]
+[ext_resource type="Script" path="res://scenes/player/player.gd" id="1_lmvap"]
 [ext_resource type="Texture2D" uid="uid://bk3r2q6ox1mao" path="res://resources/graphics/player/player.png" id="1_rqas7"]
 
 [node name="Player" type="CharacterBody2D"]
@@ -33,6 +33,17 @@ position = Vector2(90, 30)
 
 [node name="Marker2D3" type="Marker2D" parent="LaserStartPositions"]
 position = Vector2(91, 11)
+
+[node name="LaserParticles" type="CPUParticles2D" parent="."]
+position = Vector2(102, 20)
+emitting = false
+lifetime = 0.5
+one_shot = true
+direction = Vector2(0, 0)
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 150.0
+scale_amount_max = 3.0
 
 [connection signal="timeout" from="TimerLaser" to="." method="_on_timer_laser_timeout"]
 [connection signal="timeout" from="TimerGrenade" to="." method="_on_timer_grenade_timeout"]

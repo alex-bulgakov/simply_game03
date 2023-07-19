@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bhr5nrdeycdhc" path="res://resources/graphics/decals/dirt_patch.png" id="3_2hf2h"]
 [ext_resource type="PackedScene" uid="uid://dqtha52pmv1ui" path="res://scenes/levels/Houses/house_02.tscn" id="3_ps6kr"]
 [ext_resource type="PackedScene" uid="uid://c3xnrh8qdd12t" path="res://scenes/objects/gate.tscn" id="3_rb2ua"]
-[ext_resource type="PackedScene" uid="uid://3irlp0uokpfs" path="res://scenes/levels/player.tscn" id="4_3o245"]
+[ext_resource type="PackedScene" uid="uid://3irlp0uokpfs" path="res://scenes/player/player.tscn" id="4_3o245"]
 [ext_resource type="Texture2D" uid="uid://dd20d4ptqg0vh" path="res://resources/graphics/decals/moss/moss_1.png" id="4_3qe2g"]
 [ext_resource type="Texture2D" uid="uid://bycxa0gbaf5hn" path="res://resources/graphics/decals/moss/moss_2.png" id="5_rymvv"]
 [ext_resource type="Texture2D" uid="uid://dhy10n67v8r6j" path="res://resources/graphics/decals/moss/moss_3.png" id="6_yadp4"]
@@ -110,6 +110,9 @@ texture = ExtResource("7_ybsrh")
 position = Vector2(3552, 2038)
 texture = ExtResource("8_q41eb")
 
+[node name="SteamVent" parent="Ground" instance=ExtResource("14_j8j7s")]
+position = Vector2(57, 1489)
+
 [node name="Gate" parent="." instance=ExtResource("3_rb2ua")]
 position = Vector2(525, -511)
 
@@ -121,9 +124,6 @@ position = Vector2(566, 494)
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(0.6, 0.6)
 position_smoothing_enabled = true
-
-[node name="SteamVent" parent="." instance=ExtResource("14_j8j7s")]
-position = Vector2(57, 1489)
 
 [connection signal="player_entered_gate" from="Gate" to="." method="_on_gate_player_entered_gate"]
 [connection signal="grenade" from="Player" to="." method="_on_player_grenade"]
