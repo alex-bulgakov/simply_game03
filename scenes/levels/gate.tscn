@@ -16,6 +16,7 @@ texture = ExtResource("1_hvr1u")
 polygon = PackedVector2Array(-365, 777, -355, 642, -302, 601, 425, 602, 486, 639, 493, 777, 1299, 778, 1459, 718, 1563, 534, 1553, -784, -1428, -781, -1428, 523, -1364, 693, -1150, 771)
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(67, 714)
