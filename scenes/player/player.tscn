@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://3irlp0uokpfs"]
+[gd_scene load_steps=5 format=3 uid="uid://3irlp0uokpfs"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_lmvap"]
 [ext_resource type="Texture2D" uid="uid://bk3r2q6ox1mao" path="res://resources/graphics/player/player.png" id="1_rqas7"]
+[ext_resource type="Texture2D" uid="uid://cuv22l63lw147" path="res://resources/graphics/decals/white.png" id="3_a6r44"]
+
+[sub_resource type="Gradient" id="Gradient_ot0fw"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.0705882)
 
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 31
@@ -39,11 +43,15 @@ position = Vector2(102, 20)
 emitting = false
 lifetime = 0.5
 one_shot = true
+texture = ExtResource("3_a6r44")
 direction = Vector2(0, 0)
+spread = 10.0
 gravity = Vector2(0, 0)
 initial_velocity_min = 100.0
 initial_velocity_max = 150.0
-scale_amount_max = 3.0
+scale_amount_min = 0.1
+color = Color(0.388235, 0.407843, 0.545098, 1)
+color_ramp = SubResource("Gradient_ot0fw")
 
 [connection signal="timeout" from="TimerLaser" to="." method="_on_timer_laser_timeout"]
 [connection signal="timeout" from="TimerGrenade" to="." method="_on_timer_grenade_timeout"]

@@ -28,7 +28,7 @@ func _process(_delta):
 		laser.emit(selected_laser.global_position, player_direction)
 		can_laser = false
 		$LaserParticles.emitting = true
-#		$LaserParticles.direction = player_direction
+
 
 	if Input.is_action_pressed("secondary action") and can_grenade:
 		var pos = $LaserStartPositions.get_children()[0].global_position	
