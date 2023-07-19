@@ -1,18 +1,19 @@
-[gd_scene load_steps=18 format=3 uid="uid://b5osqmiga6ppv"]
+[gd_scene load_steps=19 format=3 uid="uid://b5osqmiga6ppv"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_xcr6i"]
-[ext_resource type="Texture2D" uid="uid://cbq74fqc6j8b3" path="res://resources/graphics/ground/stones.png" id="2_5rsxx"]
-[ext_resource type="Texture2D" uid="uid://bhr5nrdeycdhc" path="res://resources/graphics/decals/dirt_patch.png" id="3_2hf2h"]
+[ext_resource type="Texture2D" uid="uid://dsnm2q5lolfow" path="res://resources/graphics/ground/stones.png" id="2_5rsxx"]
+[ext_resource type="Texture2D" uid="uid://db46a8po32607" path="res://resources/graphics/decals/dirt_patch.png" id="3_2hf2h"]
 [ext_resource type="PackedScene" uid="uid://dqtha52pmv1ui" path="res://scenes/levels/Houses/house_02.tscn" id="3_ps6kr"]
 [ext_resource type="PackedScene" uid="uid://c3xnrh8qdd12t" path="res://scenes/objects/gate.tscn" id="3_rb2ua"]
 [ext_resource type="PackedScene" uid="uid://3irlp0uokpfs" path="res://scenes/player/player.tscn" id="4_3o245"]
-[ext_resource type="Texture2D" uid="uid://dd20d4ptqg0vh" path="res://resources/graphics/decals/moss/moss_1.png" id="4_3qe2g"]
-[ext_resource type="Texture2D" uid="uid://bycxa0gbaf5hn" path="res://resources/graphics/decals/moss/moss_2.png" id="5_rymvv"]
-[ext_resource type="Texture2D" uid="uid://dhy10n67v8r6j" path="res://resources/graphics/decals/moss/moss_3.png" id="6_yadp4"]
-[ext_resource type="Texture2D" uid="uid://d357rbakvmg27" path="res://resources/graphics/decals/moss/moss_4.png" id="7_ybsrh"]
-[ext_resource type="Texture2D" uid="uid://cmvod2st8psfs" path="res://resources/graphics/decals/moss/moss_5.png" id="8_q41eb"]
-[ext_resource type="Texture2D" uid="uid://c0vxb086j67sa" path="res://resources/graphics/tilesets/outside_walls.png" id="9_88boq"]
-[ext_resource type="Texture2D" uid="uid://gkcf1ym5p82x" path="res://resources/graphics/tilesets/soil.png" id="10_rfjxp"]
+[ext_resource type="Texture2D" uid="uid://q8p6pj25yv38" path="res://resources/graphics/decals/moss/moss_1.png" id="4_3qe2g"]
+[ext_resource type="PackedScene" uid="uid://y250kena7gd4" path="res://scenes/objects/wall_lamp.tscn" id="5_7vysi"]
+[ext_resource type="Texture2D" uid="uid://c4efxo2nvo8ns" path="res://resources/graphics/decals/moss/moss_2.png" id="5_rymvv"]
+[ext_resource type="Texture2D" uid="uid://fwr2t7buayfi" path="res://resources/graphics/decals/moss/moss_3.png" id="6_yadp4"]
+[ext_resource type="Texture2D" uid="uid://hucuuywqp02e" path="res://resources/graphics/decals/moss/moss_4.png" id="7_ybsrh"]
+[ext_resource type="Texture2D" uid="uid://mmjaiilyjoga" path="res://resources/graphics/decals/moss/moss_5.png" id="8_q41eb"]
+[ext_resource type="Texture2D" uid="uid://dh35q04kbdipf" path="res://resources/graphics/tilesets/outside_walls.png" id="9_88boq"]
+[ext_resource type="Texture2D" uid="uid://bwhjtqc8av7qb" path="res://resources/graphics/tilesets/soil.png" id="10_rfjxp"]
 [ext_resource type="PackedScene" uid="uid://drqfk536nnpcp" path="res://scenes/objects/steam_vent.tscn" id="14_j8j7s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gp12u"]
@@ -69,6 +70,11 @@ texture = ExtResource("3_2hf2h")
 [node name="House02" parent="Ground/Soil" instance=ExtResource("3_ps6kr")]
 position = Vector2(1483, 2107)
 rotation = 3.14159
+
+[node name="WallLamp" parent="Ground/Soil/House02" instance=ExtResource("5_7vysi")]
+position = Vector2(1417, 941.004)
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
 
 [node name="TileMap" type="TileMap" parent="Ground"]
 tile_set = SubResource("TileSet_lbxsl")
