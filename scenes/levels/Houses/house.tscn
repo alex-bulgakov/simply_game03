@@ -59,6 +59,7 @@ sources/0 = SubResource("TileSetAtlasSource_t15yi")
 size = Vector2(2102, 2487)
 
 [node name="House" type="Area2D"]
+collision_layer = 16
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_r4rr8")

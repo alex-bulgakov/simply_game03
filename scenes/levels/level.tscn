@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cbq74fqc6j8b3" path="res://resources/graphics/ground/stones.png" id="2_5rsxx"]
 [ext_resource type="Texture2D" uid="uid://bhr5nrdeycdhc" path="res://resources/graphics/decals/dirt_patch.png" id="3_2hf2h"]
 [ext_resource type="PackedScene" uid="uid://dqtha52pmv1ui" path="res://scenes/levels/Houses/house_02.tscn" id="3_ps6kr"]
-[ext_resource type="PackedScene" uid="uid://c3xnrh8qdd12t" path="res://scenes/levels/gate.tscn" id="3_rb2ua"]
+[ext_resource type="PackedScene" uid="uid://c3xnrh8qdd12t" path="res://scenes/objects/gate.tscn" id="3_rb2ua"]
 [ext_resource type="PackedScene" uid="uid://3irlp0uokpfs" path="res://scenes/levels/player.tscn" id="4_3o245"]
 [ext_resource type="Texture2D" uid="uid://dd20d4ptqg0vh" path="res://resources/graphics/decals/moss/moss_1.png" id="4_3qe2g"]
 [ext_resource type="Texture2D" uid="uid://bycxa0gbaf5hn" path="res://resources/graphics/decals/moss/moss_2.png" id="5_rymvv"]
@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://cmvod2st8psfs" path="res://resources/graphics/decals/moss/moss_5.png" id="8_q41eb"]
 [ext_resource type="Texture2D" uid="uid://c0vxb086j67sa" path="res://resources/graphics/tilesets/outside_walls.png" id="9_88boq"]
 [ext_resource type="Texture2D" uid="uid://gkcf1ym5p82x" path="res://resources/graphics/tilesets/soil.png" id="10_rfjxp"]
-[ext_resource type="PackedScene" uid="uid://e64cc6bvtpa0" path="res://scenes/levels/Houses/house.tscn" id="13_csy4q"]
+[ext_resource type="PackedScene" uid="uid://drqfk536nnpcp" path="res://scenes/objects/steam_vent.tscn" id="14_j8j7s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gp12u"]
 resource_name = "walls"
@@ -61,14 +61,14 @@ texture = ExtResource("2_5rsxx")
 region_enabled = true
 region_rect = Rect2(-7878.54, -1900.35, 16000, 10000)
 
-[node name="House02" parent="Ground/Soil" instance=ExtResource("3_ps6kr")]
-position = Vector2(2370, 3802)
-rotation = 3.14159
-
-[node name="Decoration" type="Sprite2D" parent="Ground"]
+[node name="Decoration" type="Sprite2D" parent="Ground/Soil"]
 modulate = Color(0.909804, 0.623529, 0.576471, 1)
-position = Vector2(375, 1435)
+position = Vector2(600, 536)
 texture = ExtResource("3_2hf2h")
+
+[node name="House02" parent="Ground/Soil" instance=ExtResource("3_ps6kr")]
+position = Vector2(1483, 2107)
+rotation = 3.14159
 
 [node name="TileMap" type="TileMap" parent="Ground"]
 tile_set = SubResource("TileSet_lbxsl")
@@ -115,16 +115,15 @@ position = Vector2(525, -511)
 
 [node name="Projectiles" type="Node2D" parent="."]
 
-[node name="House" parent="." instance=ExtResource("13_csy4q")]
-position = Vector2(-1528, 1690)
-
 [node name="Player" parent="." instance=ExtResource("4_3o245")]
 position = Vector2(566, 494)
-scale = Vector2(0.5, 0.5)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(0.6, 0.6)
 position_smoothing_enabled = true
+
+[node name="SteamVent" parent="." instance=ExtResource("14_j8j7s")]
+position = Vector2(57, 1489)
 
 [connection signal="player_entered_gate" from="Gate" to="." method="_on_gate_player_entered_gate"]
 [connection signal="grenade" from="Player" to="." method="_on_player_grenade"]
