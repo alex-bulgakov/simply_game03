@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://3irlp0uokpfs"]
+[gd_scene load_steps=6 format=3 uid="uid://3irlp0uokpfs"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_lmvap"]
 [ext_resource type="Texture2D" uid="uid://bk3r2q6ox1mao" path="res://resources/graphics/player/player.png" id="1_rqas7"]
 [ext_resource type="Texture2D" uid="uid://cuv22l63lw147" path="res://resources/graphics/decals/white.png" id="3_a6r44"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_7u44p"]
+polygon = PackedVector2Array(-53, 59, -74, 48, -84, 28, -96, -1, -91, -25, -76, -46, -43, -55, -13, -60, -1, -46, 10, -28, 37, -10, 65, -1, 93, 9, 93, 31, 83, 32, 66, 36, 54, 50, 27, 49, 26, 39, 6, 37, -12, 45, -31, 55)
 
 [sub_resource type="Gradient" id="Gradient_ot0fw"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.0705882)
@@ -11,32 +14,23 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.0705882)
 collision_mask = 31
 script = ExtResource("1_lmvap")
 
-[node name="Player_sprite" type="Sprite2D" parent="."]
-rotation = 1.5708
-texture = ExtResource("1_rqas7")
-
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
 rotation = 1.5708
 polygon = PackedVector2Array(-63, 24, -46, 86, -5, 103, 62, 74, 63, 32, 43, -10, 55, -26, 55, -61, 38, -77, 36, -97, 2, -100, -17, -45, -35, -14)
 
-[node name="TimerLaser" type="Timer" parent="."]
-wait_time = 0.5
-autostart = true
-
-[node name="TimerGrenade" type="Timer" parent="."]
-wait_time = 2.0
-autostart = true
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_7u44p")
 
 [node name="LaserStartPositions" type="Node2D" parent="."]
 
 [node name="Marker2D" type="Marker2D" parent="LaserStartPositions"]
-position = Vector2(93, 21)
+position = Vector2(101, 21)
 
 [node name="Marker2D2" type="Marker2D" parent="LaserStartPositions"]
-position = Vector2(90, 30)
+position = Vector2(101, 31)
 
 [node name="Marker2D3" type="Marker2D" parent="LaserStartPositions"]
-position = Vector2(91, 11)
+position = Vector2(103, 10)
 
 [node name="LaserParticles" type="CPUParticles2D" parent="."]
 position = Vector2(102, 20)
@@ -52,6 +46,18 @@ initial_velocity_max = 1000.0
 scale_amount_min = 0.1
 color = Color(0.388235, 0.407843, 0.545098, 1)
 color_ramp = SubResource("Gradient_ot0fw")
+
+[node name="Player_sprite" type="Sprite2D" parent="."]
+rotation = 1.5708
+texture = ExtResource("1_rqas7")
+
+[node name="TimerLaser" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="TimerGrenade" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
 
 [connection signal="timeout" from="TimerLaser" to="." method="_on_timer_laser_timeout"]
 [connection signal="timeout" from="TimerGrenade" to="." method="_on_timer_grenade_timeout"]

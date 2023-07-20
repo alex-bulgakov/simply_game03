@@ -71,6 +71,8 @@ down={
 2d_physics/layer_3="Objects"
 2d_physics/layer_4="Projectiles"
 2d_physics/layer_5="Items and zones"
+2d_physics/layer_6="Lights"
+2d_physics/layer_7="ground"
 
 [rendering]
 
