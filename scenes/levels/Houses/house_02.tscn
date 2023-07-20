@@ -1,6 +1,7 @@
-[gd_scene load_steps=28 format=3 uid="uid://dqtha52pmv1ui"]
+[gd_scene load_steps=29 format=3 uid="uid://dqtha52pmv1ui"]
 
-[ext_resource type="Texture2D" uid="uid://d0mk7tj46xgo1" path="res://resources/graphics/tilesets/interior.png" id="1_m5s7n"]
+[ext_resource type="Script" path="res://scenes/levels/Houses/house_02.gd" id="1_2aenu"]
+[ext_resource type="Texture2D" uid="uid://drfqrwcoo35bf" path="res://resources/graphics/tilesets/interior.png" id="1_m5s7n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6pxql"]
 size = Vector2(3672, 2480)
@@ -275,6 +276,7 @@ sources/0 = SubResource("TileSetAtlasSource_q33nb")
 
 [node name="House02" type="Area2D"]
 collision_layer = 16
+script = ExtResource("1_2aenu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(790, 576)
@@ -299,3 +301,6 @@ layer_2/y_sort_enabled = false
 layer_2/y_sort_origin = 0
 layer_2/z_index = 0
 layer_2/tile_data = PackedInt32Array(262147, 327680, 8, 131075, 65536, 6, 196611, 65536, 6, 65539, 65536, 7, 65536, 0, 6, 65537, 0, 6, 65538, 0, 6, 131069, 262144, 7, 131070, 393216, 7, 131071, 262144, 7, -3, 262144, 7, -65530, 393216, 7, -2, 0, 6, -1, 0, 6, -65536, 0, 6, -65535, 0, 6, -65533, 0, 6, -65532, 0, 6, -65531, 0, 6, -65534, 196608, 8, -131070, 327680, 6)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -6,7 +6,10 @@ signal grenade(position, direction)
 var can_laser: bool = true
 var can_grenade: bool = true
 
-const speed: int = 300
+#const speed: int = 300
+
+@export var max_speed: int = 500
+var speed: int = max_speed
 
 func _process(_delta):
 	# input
