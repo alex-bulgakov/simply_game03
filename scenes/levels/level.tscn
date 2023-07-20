@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://b5osqmiga6ppv"]
+[gd_scene load_steps=21 format=3 uid="uid://b5osqmiga6ppv"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_xcr6i"]
 [ext_resource type="Texture2D" uid="uid://cbq74fqc6j8b3" path="res://resources/graphics/ground/stones.png" id="2_5rsxx"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://d357rbakvmg27" path="res://resources/graphics/decals/moss/moss_4.png" id="7_ybsrh"]
 [ext_resource type="Texture2D" uid="uid://cmvod2st8psfs" path="res://resources/graphics/decals/moss/moss_5.png" id="8_q41eb"]
 [ext_resource type="Texture2D" uid="uid://c0vxb086j67sa" path="res://resources/graphics/tilesets/outside_walls.png" id="9_88boq"]
+[ext_resource type="PackedScene" uid="uid://cgrq24vcvi8rm" path="res://scenes/objects/light_fan_animation.tscn" id="10_6h53g"]
 [ext_resource type="Texture2D" uid="uid://gkcf1ym5p82x" path="res://resources/graphics/tilesets/soil.png" id="10_rfjxp"]
 [ext_resource type="PackedScene" uid="uid://drqfk536nnpcp" path="res://scenes/objects/steam_vent.tscn" id="14_j8j7s"]
 
@@ -62,6 +63,7 @@ position = Vector2(549, 462)
 texture = ExtResource("2_5rsxx")
 region_enabled = true
 region_rect = Rect2(-7878.54, -1900.35, 16000, 10000)
+metadata/_edit_lock_ = true
 
 [node name="Decoration" type="Sprite2D" parent="Ground/Ground"]
 modulate = Color(0.909804, 0.623529, 0.576471, 1)
@@ -71,6 +73,7 @@ texture = ExtResource("3_2hf2h")
 [node name="House02" parent="Ground/Ground" instance=ExtResource("3_ps6kr")]
 position = Vector2(1483, 2107)
 rotation = 3.14159
+metadata/_edit_lock_ = true
 
 [node name="Moss1" type="Sprite2D" parent="Ground/Ground"]
 position = Vector2(2942, 37)
@@ -117,8 +120,10 @@ position = Vector2(57, 1489)
 
 [node name="Gate" parent="." instance=ExtResource("3_rb2ua")]
 position = Vector2(525, -511)
+metadata/_edit_lock_ = true
 
 [node name="Projectiles" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("4_3o245")]
 position = Vector2(566, 494)
@@ -126,6 +131,11 @@ position = Vector2(566, 494)
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(0.6, 0.6)
 position_smoothing_enabled = true
+
+[node name="LightFanAnimation" parent="." instance=ExtResource("10_6h53g")]
+position = Vector2(57, 1140)
+scale = Vector2(0.5, 0.5)
+autoplay = "fan"
 
 [node name="Lights" type="Node2D" parent="."]
 
@@ -136,11 +146,13 @@ rotation = 3.14159
 [node name="SimpleLight2" parent="Lights" instance=ExtResource("6_mw2g2")]
 position = Vector2(-425, 1958)
 rotation = -1.5708
+metadata/_edit_lock_ = true
 
 [node name="WallLamp" parent="Lights" instance=ExtResource("5_7vysi")]
 position = Vector2(616, 1441)
 rotation = -1.5708
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="WallLamp7" parent="Lights" instance=ExtResource("5_7vysi")]
 position = Vector2(1998, 1931)
