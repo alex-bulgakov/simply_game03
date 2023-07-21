@@ -205,6 +205,7 @@ animations = [{
 [node name="LightFanAnimation" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_lfrs8")
 animation = &"fan"
+autoplay = "fan"
 frame = 27
 frame_progress = 0.4379
 
