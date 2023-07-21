@@ -1,20 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://nmwtqjjl86fm"]
+[gd_scene load_steps=3 format=3 uid="uid://nmwtqjjl86fm"]
 
-[ext_resource type="Texture2D" uid="uid://0qq4p32dj0bw" path="res://resources/graphics/enemies/drone.png" id="1_wg2r3"]
+[ext_resource type="Texture2D" uid="uid://c5hp0kosyo71r" path="res://resources/graphics/enemies/drone.png" id="1_wg2r3"]
 [ext_resource type="Script" path="res://scenes/enemies/drone.gd" id="1_yyhcc"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hwpxd"]
-radius = 72.0
-height = 310.0
 
 [node name="Drone" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 15
 script = ExtResource("1_yyhcc")
 
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(1, -70, 21, -64, 48, -48, 56, -38, 141, -31, 149, 0, 69, 6, 63, 33, 46, 59, 17, 69, -13, 70, -39, 62, -60, 43, -69, 12, -152, 21, -143, -14, -61, -34, -43, -52, -17, -65)
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_wg2r3")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-rotation = 1.5708
-shape = SubResource("CapsuleShape2D_hwpxd")

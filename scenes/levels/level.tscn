@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b5osqmiga6ppv"]
+[gd_scene load_steps=22 format=3 uid="uid://b5osqmiga6ppv"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_xcr6i"]
 [ext_resource type="Texture2D" uid="uid://dsnm2q5lolfow" path="res://resources/graphics/ground/stones.png" id="2_5rsxx"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://dh35q04kbdipf" path="res://resources/graphics/tilesets/outside_walls.png" id="9_88boq"]
 [ext_resource type="PackedScene" uid="uid://cgrq24vcvi8rm" path="res://scenes/objects/light_fan_animation.tscn" id="10_6h53g"]
 [ext_resource type="Texture2D" uid="uid://bwhjtqc8av7qb" path="res://resources/graphics/tilesets/soil.png" id="10_rfjxp"]
+[ext_resource type="PackedScene" uid="uid://nmwtqjjl86fm" path="res://scenes/enemies/drone.tscn" id="13_vm04s"]
 [ext_resource type="PackedScene" uid="uid://drqfk536nnpcp" path="res://scenes/objects/steam_vent.tscn" id="14_j8j7s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gp12u"]
@@ -105,9 +106,6 @@ texture = ExtResource("7_ybsrh")
 position = Vector2(3534.5, 2040.33)
 texture = ExtResource("8_q41eb")
 
-[node name="SteamVent" parent="Ground" instance=ExtResource("14_j8j7s")]
-position = Vector2(57, 1489)
-
 [node name="Decoration" type="Sprite2D" parent="Ground"]
 modulate = Color(0.909804, 0.623529, 0.576471, 1)
 position = Vector2(1149, 998)
@@ -117,6 +115,12 @@ texture = ExtResource("3_2hf2h")
 position = Vector2(2032, 2569)
 rotation = 3.14159
 metadata/_edit_lock_ = true
+
+[node name="SteamVent" parent="Ground" instance=ExtResource("14_j8j7s")]
+position = Vector2(57, 1489)
+
+[node name="Drone" parent="Ground" instance=ExtResource("13_vm04s")]
+position = Vector2(198, 515)
 
 [node name="Gate" parent="." instance=ExtResource("3_rb2ua")]
 position = Vector2(525, -511)

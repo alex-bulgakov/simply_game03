@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 var direction = Vector2.ZERO
 
+var is_enemy = true
+
 func _process(delta):
 	# direction
 	
@@ -18,3 +20,6 @@ func _process(delta):
 	
 	# move
 	move_and_slide()
+
+func hit():
+	print('damage')

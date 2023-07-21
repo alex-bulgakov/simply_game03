@@ -1,9 +1,9 @@
 [gd_scene load_steps=11 format=3 uid="uid://c0fv5ia2tjy00"]
 
 [ext_resource type="Script" path="res://scenes/projectiles/grenade.gd" id="1_3v2py"]
-[ext_resource type="Texture2D" uid="uid://dv4jbb04q0u4o" path="res://resources/graphics/projectiles/grenade.png" id="1_qmctd"]
-[ext_resource type="Texture2D" uid="uid://uv1uvg5q16f3" path="res://resources/graphics/explosions/explosion_3.png" id="3_tpb26"]
-[ext_resource type="Texture2D" uid="uid://cmmp2jc6m3yd8" path="res://resources/graphics/lights/textures/circle.png" id="4_y1xro"]
+[ext_resource type="Texture2D" uid="uid://bpt0vigs70jrv" path="res://resources/graphics/projectiles/grenade.png" id="1_qmctd"]
+[ext_resource type="Texture2D" uid="uid://druiqht3iuehs" path="res://resources/graphics/explosions/explosion_3.png" id="3_tpb26"]
+[ext_resource type="Texture2D" uid="uid://dyh7l21amans1" path="res://resources/graphics/lights/textures/circle.png" id="4_y1xro"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_slwa6"]
 friction = 10.0
@@ -11,6 +11,63 @@ bounce = 0.4
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kkwsd"]
 radius = 82.1523
+
+[sub_resource type="Animation" id="Animation_lelfu"]
+resource_name = "Blinking"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PointLight2D:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 15.0, 0.0, 15.0, 0.0, 15.0, 0.0, 15.0, 0.0, 15.0, 0.0, 15.0, 0.0, 15.0, 0.0, 15.0, 0.0, 15.0, 0.0, 15.0, 0.0]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"explode"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_i6ns8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Explosion:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [27]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PointLight2D:energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="Animation" id="Animation_jby0p"]
 resource_name = "explosion"
@@ -76,63 +133,6 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
-}
-
-[sub_resource type="Animation" id="Animation_i6ns8"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Explosion:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [27]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("PointLight2D:energy")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
-[sub_resource type="Animation" id="Animation_lelfu"]
-resource_name = "Blinking"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("PointLight2D:energy")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [0.0, 15.0, 0.0, 15.0, 0.0, 15.0, 0.0, 15.0, 0.0, 15.0, 0.0, 15.0, 0.0, 15.0, 0.0, 15.0, 0.0, 15.0, 0.0, 15.0, 0.0]
-}
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(2),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"explode"
-}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gumy5"]
