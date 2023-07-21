@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://y250kena7gd4"]
 
-[ext_resource type="Texture2D" uid="uid://bgusoy7t77tqt" path="res://resources/graphics/objects/wall_lamp.png" id="1_x4t66"]
-[ext_resource type="Texture2D" uid="uid://dyh7l21amans1" path="res://resources/graphics/lights/textures/circle.png" id="2_sksge"]
+[ext_resource type="Texture2D" uid="uid://ch0285chjacf" path="res://resources/graphics/objects/wall_lamp.png" id="1_x4t66"]
+[ext_resource type="Texture2D" uid="uid://cmmp2jc6m3yd8" path="res://resources/graphics/lights/textures/circle.png" id="2_sksge"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ka2dk"]
 radius = 83.0

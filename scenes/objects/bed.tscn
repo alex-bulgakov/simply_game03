@@ -12,6 +12,10 @@ scale = Vector2(0.5, 0.5)
 collision_layer = 4
 collision_mask = 11
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_kkp6r")
+
 [node name="Bed" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_14rw0")
@@ -33,7 +37,3 @@ position = Vector2(9, -58)
 rotation = 1.55509
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_agwqj")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
-shape = SubResource("RectangleShape2D_kkp6r")

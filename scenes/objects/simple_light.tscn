@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://60o2xk2qx3vt"]
 
-[ext_resource type="Texture2D" uid="uid://r858ooirpgwp" path="res://resources/graphics/objects/light.png" id="1_m0l7h"]
-[ext_resource type="Texture2D" uid="uid://dyh7l21amans1" path="res://resources/graphics/lights/textures/circle.png" id="2_0uvjc"]
+[ext_resource type="Texture2D" uid="uid://cls1fmha562th" path="res://resources/graphics/objects/light.png" id="1_m0l7h"]
+[ext_resource type="Texture2D" uid="uid://cmmp2jc6m3yd8" path="res://resources/graphics/lights/textures/circle.png" id="2_0uvjc"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dehti"]
 radius = 18.0
