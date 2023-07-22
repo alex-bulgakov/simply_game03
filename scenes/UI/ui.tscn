@@ -1,30 +1,76 @@
-[gd_scene load_steps=2 format=3 uid="uid://d03t80xtanepf"]
+[gd_scene load_steps=5 format=3 uid="uid://d03t80xtanepf"]
 
 [ext_resource type="Texture2D" uid="uid://c2oxqhl45ay8b" path="res://resources/graphics/ui/bullet.png" id="1_m5ofx"]
+[ext_resource type="Texture2D" uid="uid://b7sa734pyfc6d" path="res://resources/graphics/ui/grenade.png" id="2_3gkgu"]
+[ext_resource type="Texture2D" uid="uid://baqyirifloot4" path="res://resources/graphics/ui/progress_bar/bg.png" id="3_cf56a"]
+[ext_resource type="Texture2D" uid="uid://b7g71qv2qo7kn" path="res://resources/graphics/ui/progress_bar/progress.png" id="4_tsfpg"]
 
 [node name="UI" type="CanvasLayer"]
 
-[node name="LaserCounter" type="Control" parent="."]
-layout_mode = 3
-anchor_left = 0.01
-anchor_top = 0.93
-anchor_right = 0.01
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -40.0
+offset_top = -54.0
 offset_right = 40.0
+offset_bottom = -14.0
 grow_vertical = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="LaserCounter"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="LaserCounter" type="Control" parent="HBoxContainer"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
 
-[node name="Label" type="Label" parent="LaserCounter/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/LaserCounter"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/LaserCounter/VBoxContainer"]
 layout_mode = 2
 text = "20"
 horizontal_alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="LaserCounter/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/LaserCounter/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_m5ofx")
 expand_mode = 4
+
+[node name="GrenadeCounter" type="Control" parent="HBoxContainer"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/GrenadeCounter"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/GrenadeCounter/VBoxContainer"]
+layout_mode = 2
+text = "30"
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/GrenadeCounter/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_3gkgu")
+expand_mode = 4
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -40.0
+offset_right = 150.0
+grow_horizontal = 2
+grow_vertical = 0
+value = 100.0
+texture_under = ExtResource("3_cf56a")
+texture_progress = ExtResource("4_tsfpg")
