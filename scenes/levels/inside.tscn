@@ -1,22 +1,24 @@
-[gd_scene load_steps=13 format=3 uid="uid://407e28htop64"]
+[gd_scene load_steps=14 format=3 uid="uid://407e28htop64"]
 
 [ext_resource type="PackedScene" uid="uid://b5osqmiga6ppv" path="res://scenes/levels/level.tscn" id="1_g154h"]
-[ext_resource type="Texture2D" uid="uid://bpavlcv8ffvl8" path="res://resources/graphics/ground/dirt.png" id="2_0gtmb"]
+[ext_resource type="Texture2D" uid="uid://bqfonqv62ts2j" path="res://resources/graphics/ground/dirt.png" id="2_0gtmb"]
 [ext_resource type="Script" path="res://scenes/levels/inside.gd" id="2_mc6pi"]
 [ext_resource type="TileSet" uid="uid://dmkd5swynsba0" path="res://scenes/levels/house_02.tres" id="2_rytgs"]
+[ext_resource type="PackedScene" uid="uid://yiugme0hfqm5" path="res://scenes/levels/outside.tscn" id="3_x4bbg"]
 [ext_resource type="PackedScene" uid="uid://60o2xk2qx3vt" path="res://scenes/objects/simple_light.tscn" id="4_46yhv"]
 [ext_resource type="PackedScene" uid="uid://y250kena7gd4" path="res://scenes/objects/wall_lamp.tscn" id="4_xw1q6"]
 [ext_resource type="PackedScene" uid="uid://cgrq24vcvi8rm" path="res://scenes/objects/light_fan_animation.tscn" id="5_bv7fr"]
-[ext_resource type="Texture2D" uid="uid://cmmp2jc6m3yd8" path="res://resources/graphics/lights/textures/circle.png" id="5_ckcdc"]
-[ext_resource type="Texture2D" uid="uid://dv8bkwjay1ajl" path="res://resources/graphics/lights/overlays/infrastructure.png" id="6_1o3hq"]
-[ext_resource type="Texture2D" uid="uid://dhs26a3ehxbgo" path="res://resources/graphics/lights/overlays/hole.png" id="7_tovyv"]
-[ext_resource type="Texture2D" uid="uid://iycjfygp3mkd" path="res://resources/graphics/lights/overlays/lattice.png" id="8_arjue"]
+[ext_resource type="Texture2D" uid="uid://dyh7l21amans1" path="res://resources/graphics/lights/textures/circle.png" id="5_ckcdc"]
+[ext_resource type="Texture2D" uid="uid://xsmwlbg5sob6" path="res://resources/graphics/lights/overlays/infrastructure.png" id="6_1o3hq"]
+[ext_resource type="Texture2D" uid="uid://6g45dj3j8hdv" path="res://resources/graphics/lights/overlays/hole.png" id="7_tovyv"]
+[ext_resource type="Texture2D" uid="uid://cct0ht0v0rdc1" path="res://resources/graphics/lights/overlays/lattice.png" id="8_arjue"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bxru1"]
 size = Vector2(695, 404.5)
 
 [node name="Inside" instance=ExtResource("1_g154h")]
 script = ExtResource("2_mc6pi")
+outside_level_scene = ExtResource("3_x4bbg")
 
 [node name="Sprite2D" type="Sprite2D" parent="Ground" index="0"]
 texture_repeat = 2

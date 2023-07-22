@@ -2,16 +2,16 @@
 
 [ext_resource type="PackedScene" uid="uid://b5osqmiga6ppv" path="res://scenes/levels/level.tscn" id="1_nwkw7"]
 [ext_resource type="Script" path="res://scenes/levels/outside.gd" id="2_4l2jh"]
-[ext_resource type="Texture2D" uid="uid://cbq74fqc6j8b3" path="res://resources/graphics/ground/stones.png" id="2_6a8lj"]
+[ext_resource type="Texture2D" uid="uid://dsnm2q5lolfow" path="res://resources/graphics/ground/stones.png" id="2_6a8lj"]
 [ext_resource type="PackedScene" uid="uid://c3xnrh8qdd12t" path="res://scenes/objects/gate.tscn" id="2_ifds4"]
-[ext_resource type="Texture2D" uid="uid://c0vxb086j67sa" path="res://resources/graphics/tilesets/outside_walls.png" id="3_56ijo"]
-[ext_resource type="Texture2D" uid="uid://gkcf1ym5p82x" path="res://resources/graphics/tilesets/soil.png" id="4_exkpv"]
-[ext_resource type="Texture2D" uid="uid://dd20d4ptqg0vh" path="res://resources/graphics/decals/moss/moss_1.png" id="5_ddxrg"]
-[ext_resource type="Texture2D" uid="uid://bycxa0gbaf5hn" path="res://resources/graphics/decals/moss/moss_2.png" id="6_ptvh3"]
-[ext_resource type="Texture2D" uid="uid://dhy10n67v8r6j" path="res://resources/graphics/decals/moss/moss_3.png" id="7_fgvgx"]
-[ext_resource type="Texture2D" uid="uid://d357rbakvmg27" path="res://resources/graphics/decals/moss/moss_4.png" id="8_ycxag"]
-[ext_resource type="Texture2D" uid="uid://cmvod2st8psfs" path="res://resources/graphics/decals/moss/moss_5.png" id="9_sit5g"]
-[ext_resource type="Texture2D" uid="uid://bhr5nrdeycdhc" path="res://resources/graphics/decals/dirt_patch.png" id="10_tnek5"]
+[ext_resource type="Texture2D" uid="uid://dh35q04kbdipf" path="res://resources/graphics/tilesets/outside_walls.png" id="3_56ijo"]
+[ext_resource type="Texture2D" uid="uid://bwhjtqc8av7qb" path="res://resources/graphics/tilesets/soil.png" id="4_exkpv"]
+[ext_resource type="Texture2D" uid="uid://q8p6pj25yv38" path="res://resources/graphics/decals/moss/moss_1.png" id="5_ddxrg"]
+[ext_resource type="Texture2D" uid="uid://c4efxo2nvo8ns" path="res://resources/graphics/decals/moss/moss_2.png" id="6_ptvh3"]
+[ext_resource type="Texture2D" uid="uid://fwr2t7buayfi" path="res://resources/graphics/decals/moss/moss_3.png" id="7_fgvgx"]
+[ext_resource type="Texture2D" uid="uid://hucuuywqp02e" path="res://resources/graphics/decals/moss/moss_4.png" id="8_ycxag"]
+[ext_resource type="Texture2D" uid="uid://mmjaiilyjoga" path="res://resources/graphics/decals/moss/moss_5.png" id="9_sit5g"]
+[ext_resource type="Texture2D" uid="uid://db46a8po32607" path="res://resources/graphics/decals/dirt_patch.png" id="10_tnek5"]
 [ext_resource type="PackedScene" uid="uid://dqtha52pmv1ui" path="res://scenes/levels/Houses/house_02.tscn" id="11_i36p0"]
 [ext_resource type="PackedScene" uid="uid://drqfk536nnpcp" path="res://scenes/objects/steam_vent.tscn" id="12_3rj73"]
 
@@ -117,7 +117,8 @@ position = Vector2(57, 1489)
 position = Vector2(572, -822)
 
 [node name="Player" parent="." index="3"]
-position = Vector2(564, 270)
+position = Vector2(656, 88)
+rotation = 1.5708
 metadata/_edit_group_ = true
 
 [node name="Camera2D" parent="Player" index="7"]
