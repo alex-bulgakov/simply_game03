@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://bqfonqv62ts2j" path="res://resources/graphics/ground/dirt.png" id="2_0gtmb"]
 [ext_resource type="Script" path="res://scenes/levels/inside.gd" id="2_mc6pi"]
 [ext_resource type="TileSet" uid="uid://dmkd5swynsba0" path="res://scenes/levels/house_02.tres" id="2_rytgs"]
-[ext_resource type="PackedScene" uid="uid://yiugme0hfqm5" path="res://scenes/levels/outside.tscn" id="3_x4bbg"]
 [ext_resource type="PackedScene" uid="uid://60o2xk2qx3vt" path="res://scenes/objects/simple_light.tscn" id="4_46yhv"]
 [ext_resource type="PackedScene" uid="uid://y250kena7gd4" path="res://scenes/objects/wall_lamp.tscn" id="4_xw1q6"]
 [ext_resource type="PackedScene" uid="uid://cgrq24vcvi8rm" path="res://scenes/objects/light_fan_animation.tscn" id="5_bv7fr"]
@@ -12,13 +11,13 @@
 [ext_resource type="Texture2D" uid="uid://xsmwlbg5sob6" path="res://resources/graphics/lights/overlays/infrastructure.png" id="6_1o3hq"]
 [ext_resource type="Texture2D" uid="uid://6g45dj3j8hdv" path="res://resources/graphics/lights/overlays/hole.png" id="7_tovyv"]
 [ext_resource type="Texture2D" uid="uid://cct0ht0v0rdc1" path="res://resources/graphics/lights/overlays/lattice.png" id="8_arjue"]
+[ext_resource type="PackedScene" uid="uid://c3t4lcnouplhn" path="res://scenes/items/item.tscn" id="12_6m4y2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bxru1"]
 size = Vector2(695, 404.5)
 
 [node name="Inside" instance=ExtResource("1_g154h")]
 script = ExtResource("2_mc6pi")
-outside_level_scene = ExtResource("3_x4bbg")
 
 [node name="Sprite2D" type="Sprite2D" parent="Ground" index="0"]
 texture_repeat = 2
@@ -51,7 +50,10 @@ layer_2/tile_data = PackedInt32Array(524292, 393216, 7, 524291, 0, 6, 524288, 0,
 position = Vector2(996, 1481)
 rotation = 3.14159
 
-[node name="Player" parent="." index="2"]
+[node name="Item" parent="." index="2" instance=ExtResource("12_6m4y2")]
+position = Vector2(538, 4223)
+
+[node name="Player" parent="." index="3"]
 position = Vector2(775, 4570)
 rotation = -1.83339
 metadata/_edit_group_ = true
@@ -61,6 +63,10 @@ rotation = 0.266886
 energy = 2.0
 texture = ExtResource("5_ckcdc")
 texture_scale = 3.0
+
+[node name="Lights" parent="." index="4"]
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
 
 [node name="SimpleLight" parent="Lights" index="0" instance=ExtResource("4_46yhv")]
 position = Vector2(572, 3343)
@@ -128,12 +134,13 @@ position = Vector2(2850, 1211)
 scale = Vector2(1.98462, 1.98462)
 texture = ExtResource("8_arjue")
 
-[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." index="4"]
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." index="5"]
 color = Color(0.243137, 0.360784, 0.227451, 1)
 energy = 2.4
 blend_mode = 1
+metadata/_edit_lock_ = true
 
-[node name="Area2D" type="Area2D" parent="." index="5"]
+[node name="Area2D" type="Area2D" parent="." index="6"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 position = Vector2(776.5, 4901.75)

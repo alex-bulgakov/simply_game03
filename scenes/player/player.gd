@@ -25,21 +25,22 @@ func _process(_delta):
 	var player_direction = (get_global_mouse_position() - position).normalized()
 	
 	# laser shooting input
-	if Input.is_action_pressed("primary action") and can_laser:
+	if Input.is_action_pressed("primary action") and can_laser and Globals.laser_amount > 0:
+		Globals.laser_amount -= 1
 		var laser_markers = $LaserStartPositions.get_children()
 		var selected_laser = laser_markers[randi() % laser_markers.size()]
 		laser.emit(selected_laser.global_position, player_direction)
 		can_laser = false
 		$LaserParticles.emitting = true
+		
 
 
-	if Input.is_action_pressed("secondary action") and can_grenade:
+	if Input.is_action_pressed("secondary action") and can_grenade and Globals.grenade_amount > 0:
+		Globals.grenade_amount -= 1
 		var pos = $LaserStartPositions.get_children()[0].global_position	
 		grenade.emit(pos, player_direction)
 		can_grenade = false
 		
-	
-
 func _on_timer_laser_timeout():
 	can_laser = true
 
