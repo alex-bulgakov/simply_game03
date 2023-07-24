@@ -1,14 +1,15 @@
 [gd_scene load_steps=6 format=3 uid="uid://cohi2s7xnbgwe"]
 
 [ext_resource type="PackedScene" uid="uid://4chp6srworod" path="res://scenes/levels/item_container.tscn" id="1_o5vmo"]
-[ext_resource type="Texture2D" uid="uid://ti207a5y2qcd" path="res://resources/graphics/objects/toilet.png" id="2_ew8o0"]
+[ext_resource type="Texture2D" uid="uid://b3em6jvaug47o" path="res://resources/graphics/objects/toilet.png" id="2_ew8o0"]
 [ext_resource type="Script" path="res://scenes/levels/toilet.gd" id="2_qvcyf"]
-[ext_resource type="Texture2D" uid="uid://d46hewksur7x" path="res://resources/graphics/objects/lid.png" id="4_td30h"]
+[ext_resource type="Texture2D" uid="uid://dhmh4g00v51lo" path="res://resources/graphics/objects/lid.png" id="4_td30h"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5jowj"]
-radius = 110.114
+radius = 102.5
 
 [node name="toilet" instance=ExtResource("1_o5vmo")]
+scale = Vector2(0.8, 0.8)
 script = ExtResource("2_qvcyf")
 
 [node name="BaseSprite" parent="." index="0"]
