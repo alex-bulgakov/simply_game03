@@ -10,11 +10,11 @@ radius = 57.0
 [node name="Item" type="Area2D"]
 script = ExtResource("1_tv427")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_u43wl")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_crrsq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_u43wl")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 scale = Vector2(0.351907, 0.351907)
