@@ -18,6 +18,7 @@ func _process(_delta):
 	# for character body using velocity update and move_and_slide()
 	velocity = direction * speed
 	move_and_slide()
+	Globals.player_pos = global_position
 	
 	look_at(get_global_mouse_position())
 	# rotate

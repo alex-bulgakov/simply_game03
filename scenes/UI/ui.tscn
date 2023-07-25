@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://d03t80xtanepf"]
 
 [ext_resource type="Script" path="res://scenes/UI/ui.gd" id="1_kwqnk"]
-[ext_resource type="Texture2D" uid="uid://c2oxqhl45ay8b" path="res://resources/graphics/ui/bullet.png" id="1_m5ofx"]
-[ext_resource type="Texture2D" uid="uid://b7sa734pyfc6d" path="res://resources/graphics/ui/grenade.png" id="2_3gkgu"]
-[ext_resource type="Texture2D" uid="uid://baqyirifloot4" path="res://resources/graphics/ui/progress_bar/bg.png" id="3_cf56a"]
-[ext_resource type="Texture2D" uid="uid://b7g71qv2qo7kn" path="res://resources/graphics/ui/progress_bar/progress.png" id="4_tsfpg"]
+[ext_resource type="Texture2D" uid="uid://df2tmfq1xh22" path="res://resources/graphics/ui/bullet.png" id="1_m5ofx"]
+[ext_resource type="Texture2D" uid="uid://csl1j7q17s28o" path="res://resources/graphics/ui/grenade.png" id="2_3gkgu"]
+[ext_resource type="Texture2D" uid="uid://crq3tni7vr8dw" path="res://resources/graphics/ui/progress_bar/bg.png" id="3_cf56a"]
+[ext_resource type="Texture2D" uid="uid://cy53numvtg22f" path="res://resources/graphics/ui/progress_bar/progress.png" id="4_tsfpg"]
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_kwqnk")

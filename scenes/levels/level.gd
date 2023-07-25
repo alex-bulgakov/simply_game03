@@ -8,6 +8,8 @@ var item_scene: PackedScene = preload("res://scenes/items/item.tscn")
 func _ready():
 	for container in get_tree().get_nodes_in_group("container"):
 		container.connect("open", _on_container_opened)
+	for scout in get_tree().get_nodes_in_group("scouts"):
+		scout.connect("laser", _on_scout_laser)
 		
 func _on_container_opened(pos, direction):
 	var item = item_scene.instantiate()
@@ -16,10 +18,13 @@ func _on_container_opened(pos, direction):
 	$Items.call_deferred('add_child', item)
 
 func _on_player_laser(pos, direction):
+	create_laser(pos, direction)
+	
+func create_laser(pos, direction):
 	$UI.update_laser_text()
 	var las = laser_scene.instantiate() as Area2D
 	las.position = pos
-	las.rotation = direction.angle()
+	las.rotation_degrees = rad_to_deg(direction.angle()) + 90
 	las.direction = direction
 	$Projectiles.add_child(las)
 	
@@ -32,3 +37,5 @@ func _on_player_grenade(pos, direction):
 	grenade.linear_velocity = direction * grenade.speed
 	$Projectiles.add_child(grenade)
 
+func _on_scout_laser(pos, direction):
+	create_laser(pos, direction)

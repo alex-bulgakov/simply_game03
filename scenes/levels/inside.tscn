@@ -1,32 +1,32 @@
 [gd_scene load_steps=29 format=3 uid="uid://407e28htop64"]
 
 [ext_resource type="PackedScene" uid="uid://b5osqmiga6ppv" path="res://scenes/levels/level.tscn" id="1_g154h"]
-[ext_resource type="Texture2D" uid="uid://bqfonqv62ts2j" path="res://resources/graphics/ground/dirt.png" id="2_0gtmb"]
+[ext_resource type="Texture2D" uid="uid://bpavlcv8ffvl8" path="res://resources/graphics/ground/dirt.png" id="2_0gtmb"]
 [ext_resource type="Script" path="res://scenes/levels/inside.gd" id="2_mc6pi"]
 [ext_resource type="TileSet" uid="uid://dmkd5swynsba0" path="res://scenes/levels/house_02.tres" id="2_rytgs"]
-[ext_resource type="Texture2D" uid="uid://y1v30lxhc0hn" path="res://resources/graphics/decals/brushes/brush044.png" id="3_l6rts"]
-[ext_resource type="Texture2D" uid="uid://bib2ifr6lp4pl" path="res://resources/graphics/decals/brushes/brush045.png" id="4_1ncwq"]
+[ext_resource type="Texture2D" uid="uid://cndgyiku21itw" path="res://resources/graphics/decals/brushes/brush044.png" id="3_l6rts"]
+[ext_resource type="Texture2D" uid="uid://cebovi5834px3" path="res://resources/graphics/decals/brushes/brush045.png" id="4_1ncwq"]
 [ext_resource type="PackedScene" uid="uid://60o2xk2qx3vt" path="res://scenes/objects/simple_light.tscn" id="4_46yhv"]
 [ext_resource type="PackedScene" uid="uid://y250kena7gd4" path="res://scenes/objects/wall_lamp.tscn" id="4_xw1q6"]
 [ext_resource type="PackedScene" uid="uid://cgrq24vcvi8rm" path="res://scenes/objects/light_fan_animation.tscn" id="5_bv7fr"]
-[ext_resource type="Texture2D" uid="uid://dyh7l21amans1" path="res://resources/graphics/lights/textures/circle.png" id="5_ckcdc"]
-[ext_resource type="Texture2D" uid="uid://c17xg840wnfk3" path="res://resources/graphics/decals/brushes/brush046.png" id="5_mfntg"]
-[ext_resource type="Texture2D" uid="uid://xsmwlbg5sob6" path="res://resources/graphics/lights/overlays/infrastructure.png" id="6_1o3hq"]
-[ext_resource type="Texture2D" uid="uid://7j7yj8skffqt" path="res://resources/graphics/decals/brushes/brush049.png" id="6_24xgg"]
+[ext_resource type="Texture2D" uid="uid://cmmp2jc6m3yd8" path="res://resources/graphics/lights/textures/circle.png" id="5_ckcdc"]
+[ext_resource type="Texture2D" uid="uid://ehhxy2hfi7om" path="res://resources/graphics/decals/brushes/brush046.png" id="5_mfntg"]
+[ext_resource type="Texture2D" uid="uid://dv8bkwjay1ajl" path="res://resources/graphics/lights/overlays/infrastructure.png" id="6_1o3hq"]
+[ext_resource type="Texture2D" uid="uid://b8sip3mfpjqye" path="res://resources/graphics/decals/brushes/brush049.png" id="6_24xgg"]
 [ext_resource type="PackedScene" uid="uid://bq7xpg5bssdtg" path="res://scenes/objects/bed.tscn" id="6_mk8f5"]
 [ext_resource type="PackedScene" uid="uid://co4pr53jeuapo" path="res://scenes/levels/box.tscn" id="7_r7tb7"]
-[ext_resource type="Texture2D" uid="uid://6g45dj3j8hdv" path="res://resources/graphics/lights/overlays/hole.png" id="7_tovyv"]
+[ext_resource type="Texture2D" uid="uid://dhs26a3ehxbgo" path="res://resources/graphics/lights/overlays/hole.png" id="7_tovyv"]
 [ext_resource type="PackedScene" uid="uid://cohi2s7xnbgwe" path="res://scenes/levels/toilet.tscn" id="8_1gpj2"]
-[ext_resource type="Texture2D" uid="uid://cct0ht0v0rdc1" path="res://resources/graphics/lights/overlays/lattice.png" id="8_arjue"]
+[ext_resource type="Texture2D" uid="uid://iycjfygp3mkd" path="res://resources/graphics/lights/overlays/lattice.png" id="8_arjue"]
 [ext_resource type="PackedScene" uid="uid://drqfk536nnpcp" path="res://scenes/objects/steam_vent.tscn" id="9_yr1oo"]
-[ext_resource type="Texture2D" uid="uid://bpbbc7wilsoht" path="res://resources/graphics/objects/infestation/large.png" id="14_0nuny"]
-[ext_resource type="Texture2D" uid="uid://bhf36s6muain7" path="res://resources/graphics/objects/infestation/line.png" id="15_wrf5l"]
-[ext_resource type="Texture2D" uid="uid://cthr88x74f4gc" path="res://resources/graphics/objects/infestation/medium.png" id="16_6y025"]
-[ext_resource type="Texture2D" uid="uid://6fbcaht3ynku" path="res://resources/graphics/objects/infestation/small.png" id="17_xnmkg"]
-[ext_resource type="Texture2D" uid="uid://bu085j4mcjtmj" path="res://resources/graphics/objects/infestation/small_2.png" id="18_ffa0d"]
-[ext_resource type="Texture2D" uid="uid://ctc8uxdvbhy17" path="res://resources/graphics/objects/infestation/small_3.png" id="19_jxjsg"]
-[ext_resource type="Texture2D" uid="uid://b8om5fpj45xog" path="res://resources/graphics/objects/infestation/small_4.png" id="20_tqyfl"]
-[ext_resource type="Texture2D" uid="uid://dl5rdrnw00bty" path="res://resources/graphics/objects/infestation/spikes.png" id="21_5kyii"]
+[ext_resource type="Texture2D" uid="uid://b0ra64io1ablt" path="res://resources/graphics/objects/infestation/large.png" id="14_0nuny"]
+[ext_resource type="Texture2D" uid="uid://w7hjajnl880x" path="res://resources/graphics/objects/infestation/line.png" id="15_wrf5l"]
+[ext_resource type="Texture2D" uid="uid://bgpuep7tpgpuq" path="res://resources/graphics/objects/infestation/medium.png" id="16_6y025"]
+[ext_resource type="Texture2D" uid="uid://b051shn3dpyo6" path="res://resources/graphics/objects/infestation/small.png" id="17_xnmkg"]
+[ext_resource type="Texture2D" uid="uid://jpa5mf081sfy" path="res://resources/graphics/objects/infestation/small_2.png" id="18_ffa0d"]
+[ext_resource type="Texture2D" uid="uid://k6rkoa6f0iwi" path="res://resources/graphics/objects/infestation/small_3.png" id="19_jxjsg"]
+[ext_resource type="Texture2D" uid="uid://vv0lsnlspi1q" path="res://resources/graphics/objects/infestation/small_4.png" id="20_tqyfl"]
+[ext_resource type="Texture2D" uid="uid://mu1p5nt52kig" path="res://resources/graphics/objects/infestation/spikes.png" id="21_5kyii"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bxru1"]
 size = Vector2(695, 404.5)
@@ -248,7 +248,7 @@ metadata/_edit_lock_ = true
 position = Vector2(776.5, 4901.75)
 shape = SubResource("RectangleShape2D_bxru1")
 
-[node name="Player" parent="." index="7"]
+[node name="Player" parent="." index="8"]
 position = Vector2(775, 4570)
 rotation = -1.83339
 metadata/_edit_group_ = true
@@ -260,7 +260,7 @@ energy = 2.0
 texture = ExtResource("5_ckcdc")
 texture_scale = 3.0
 
-[node name="Lights" parent="." index="8"]
+[node name="Lights" parent="." index="9"]
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
