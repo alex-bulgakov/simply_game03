@@ -260,7 +260,7 @@ energy = 2.0
 texture = ExtResource("5_ckcdc")
 texture_scale = 3.0
 
-[node name="Lights" parent="." index="8"]
+[node name="Lights" parent="." index="9"]
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 

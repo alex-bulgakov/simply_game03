@@ -12,15 +12,15 @@ radius = 102.5
 scale = Vector2(0.8, 0.8)
 script = ExtResource("2_qvcyf")
 
-[node name="BaseSprite" parent="." index="0"]
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("CircleShape2D_5jowj")
+
+[node name="BaseSprite" parent="." index="1"]
 texture = ExtResource("2_ew8o0")
 
-[node name="LidSprite" parent="." index="1"]
+[node name="LidSprite" parent="." index="2"]
 position = Vector2(0, 17)
 texture = ExtResource("4_td30h")
-
-[node name="CollisionShape2D" parent="." index="2"]
-shape = SubResource("CircleShape2D_5jowj")
 
 [node name="Marker2D" parent="SpawnPositions" index="0"]
 position = Vector2(-30, 84)
