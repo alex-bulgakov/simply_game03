@@ -13,7 +13,7 @@ func hit():
 	if can_hit:
 		health -= 10
 		can_hit = false
-		$HitTimeout.start()
+		$Timers/HitTimeout.start()
 	if health <= 0:
 		queue_free()
 	
@@ -29,8 +29,7 @@ func _process(_delta):
 			var direction: Vector2 = (Globals.player_pos - position).normalized()
 			laser.emit(pos, direction)
 			can_laser = false
-			$LaserCooldown.start()
-
+			$Timers/LaserTimer.start()
 
 func _on_attack_area_body_entered(_body):
 	player_nearby = true
@@ -40,9 +39,9 @@ func _on_attack_area_body_exited(_body):
 	player_nearby = false
 
 
-func _on_laser_cooldown_timeout():
-	can_laser = true
-
-
 func _on_hit_timeout_timeout():
 	can_hit = true
+
+
+func _on_laser_timer_timeout():
+	can_laser = true
