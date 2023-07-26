@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://cmvod2st8psfs" path="res://resources/graphics/decals/moss/moss_5.png" id="9_sit5g"]
 [ext_resource type="Texture2D" uid="uid://bhr5nrdeycdhc" path="res://resources/graphics/decals/dirt_patch.png" id="10_tnek5"]
 [ext_resource type="PackedScene" uid="uid://dqtha52pmv1ui" path="res://scenes/levels/Houses/house_02.tscn" id="11_i36p0"]
-[ext_resource type="PackedScene" uid="uid://4bo63polsyuk" path="res://scenes/enemies/scout.tscn" id="14_kfaco"]
+[ext_resource type="PackedScene" uid="uid://b6qgp3cw4yshw" path="res://scenes/enemies/bug.tscn" id="14_ufdr8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gp12u"]
 resource_name = "walls"
@@ -113,9 +113,6 @@ metadata/_edit_lock_ = true
 [node name="Gate" parent="." index="1" instance=ExtResource("2_ifds4")]
 position = Vector2(572, -822)
 
-[node name="Scout" parent="Enemies" index="0" instance=ExtResource("14_kfaco")]
-position = Vector2(1317, 607)
-
 [node name="Player" parent="." index="6"]
 position = Vector2(656, 88)
 rotation = 1.5708
@@ -124,6 +121,9 @@ metadata/_edit_group_ = true
 [node name="Camera2D" parent="Player" index="7"]
 zoom = Vector2(0.3, 0.3)
 metadata/_edit_group_ = true
+
+[node name="Bug" parent="." index="9" instance=ExtResource("14_ufdr8")]
+position = Vector2(329, 322)
 
 [connection signal="player_entered" from="Ground/House02" to="." method="_on_house_02_player_entered"]
 [connection signal="player_out" from="Ground/House02" to="." method="_on_house_02_player_out"]

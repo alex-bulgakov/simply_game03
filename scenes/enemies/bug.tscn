@@ -1,6 +1,7 @@
-[gd_scene load_steps=32 format=3 uid="uid://b6qgp3cw4yshw"]
+[gd_scene load_steps=36 format=3 uid="uid://b6qgp3cw4yshw"]
 
 [ext_resource type="Texture2D" uid="uid://d0gvw7jhdmjji" path="res://resources/graphics/enemies/bug/attack/00010.png" id="1_qrxug"]
+[ext_resource type="Script" path="res://scenes/enemies/bug.gd" id="1_wqccr"]
 [ext_resource type="Texture2D" uid="uid://btrptv6bmkkxj" path="res://resources/graphics/enemies/bug/attack/00011.png" id="2_12y8d"]
 [ext_resource type="Texture2D" uid="uid://d4m2god4lg2nb" path="res://resources/graphics/enemies/bug/attack/00012.png" id="3_e1wic"]
 [ext_resource type="Texture2D" uid="uid://b0pyjtv70w3mi" path="res://resources/graphics/enemies/bug/attack/00013.png" id="4_5squy"]
@@ -134,11 +135,47 @@ animations = [{
 "speed": 30.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m4h7l"]
+radius = 28.9998
+height = 102.013
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ql1k2"]
+radius = 191.042
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ki5db"]
+radius = 82.1523
+
 [node name="Bug" type="CharacterBody2D"]
 rotation = -0.00329558
+collision_layer = 2
+collision_mask = 11
+script = ExtResource("1_wqccr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(0.05, 0.05)
 sprite_frames = SubResource("SpriteFrames_3htx0")
 animation = &"walk"
 frame = 3
 frame_progress = 0.364722
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_m4h7l")
+
+[node name="NoticeArea" type="Area2D" parent="."]
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NoticeArea"]
+shape = SubResource("CircleShape2D_ql1k2")
+
+[node name="AttackArea" type="Area2D" parent="."]
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+shape = SubResource("CircleShape2D_ki5db")
+
+[connection signal="body_entered" from="NoticeArea" to="." method="_on_notice_area_body_entered"]
+[connection signal="body_exited" from="NoticeArea" to="." method="_on_notice_area_body_exited"]
+[connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
+[connection signal="body_exited" from="AttackArea" to="." method="_on_attack_area_body_exited"]
