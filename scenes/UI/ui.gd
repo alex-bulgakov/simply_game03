@@ -10,6 +10,9 @@ var red: Color = Color(0.9, 0, 0, 1)
 @onready var grenade_icon: TextureRect = $MarginContainer2/HBoxContainer/GrenadeCounter/VBoxContainer/TextureRect
 @onready var health_bar: TextureProgressBar = $MarginContainer/TextureProgressBar
 	
+func _process(delta):
+	$FPS.text = "FPS: " + str(round(1/delta))
+	
 func _ready():
 	update_state_text()
 	Globals.connect("stat_change", update_state_text)
