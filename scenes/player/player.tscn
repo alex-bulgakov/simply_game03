@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://3irlp0uokpfs"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_lmvap"]
-[ext_resource type="Texture2D" uid="uid://bk3r2q6ox1mao" path="res://resources/graphics/player/player.png" id="1_rqas7"]
-[ext_resource type="Texture2D" uid="uid://cuv22l63lw147" path="res://resources/graphics/decals/white.png" id="3_a6r44"]
+[ext_resource type="Texture2D" uid="uid://cdc4u0welh3l1" path="res://resources/graphics/player/player.png" id="1_rqas7"]
+[ext_resource type="Texture2D" uid="uid://khomm077gtr8" path="res://resources/graphics/decals/white.png" id="3_a6r44"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_7u44p"]
 polygon = PackedVector2Array(-53, 59, -74, 48, -84, 28, -96, -1, -91, -25, -76, -46, -43, -55, -13, -60, -1, -46, 10, -28, 37, -10, 65, -1, 93, 9, 93, 31, 83, 32, 66, 36, 54, 50, 27, 49, 26, 39, 6, 37, -12, 45, -31, 55)
@@ -24,13 +24,13 @@ occluder = SubResource("OccluderPolygon2D_7u44p")
 [node name="LaserStartPositions" type="Node2D" parent="."]
 
 [node name="Marker2D" type="Marker2D" parent="LaserStartPositions"]
-position = Vector2(101, 21)
+position = Vector2(217, 20)
 
 [node name="Marker2D2" type="Marker2D" parent="LaserStartPositions"]
-position = Vector2(101, 31)
+position = Vector2(217, 30)
 
 [node name="Marker2D3" type="Marker2D" parent="LaserStartPositions"]
-position = Vector2(103, 10)
+position = Vector2(219, 9)
 
 [node name="LaserParticles" type="CPUParticles2D" parent="."]
 position = Vector2(102, 20)

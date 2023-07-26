@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://4chp6srworod" path="res://scenes/levels/item_container.tscn" id="1_v6h2f"]
 [ext_resource type="Script" path="res://ItemContainer.gd" id="2_orq82"]
-[ext_resource type="Texture2D" uid="uid://bpm2yilc6q8o7" path="res://resources/graphics/objects/box/base.png" id="3_xyeh0"]
-[ext_resource type="Texture2D" uid="uid://c2jbmykpj8fnn" path="res://resources/graphics/objects/box/lid.png" id="4_jd81j"]
+[ext_resource type="Texture2D" uid="uid://cdrce8gvpmilj" path="res://resources/graphics/objects/box/base.png" id="3_xyeh0"]
+[ext_resource type="Texture2D" uid="uid://b56xy4s2esjsq" path="res://resources/graphics/objects/box/lid.png" id="4_jd81j"]
 
 [node name="Crate" instance=ExtResource("1_v6h2f")]
 script = ExtResource("2_orq82")

@@ -1,9 +1,9 @@
 [gd_scene load_steps=11 format=3 uid="uid://c0fv5ia2tjy00"]
 
 [ext_resource type="Script" path="res://scenes/projectiles/grenade.gd" id="1_3v2py"]
-[ext_resource type="Texture2D" uid="uid://dv4jbb04q0u4o" path="res://resources/graphics/projectiles/grenade.png" id="1_qmctd"]
-[ext_resource type="Texture2D" uid="uid://uv1uvg5q16f3" path="res://resources/graphics/explosions/explosion_3.png" id="3_tpb26"]
-[ext_resource type="Texture2D" uid="uid://cmmp2jc6m3yd8" path="res://resources/graphics/lights/textures/circle.png" id="4_y1xro"]
+[ext_resource type="Texture2D" uid="uid://bpt0vigs70jrv" path="res://resources/graphics/projectiles/grenade.png" id="1_qmctd"]
+[ext_resource type="Texture2D" uid="uid://druiqht3iuehs" path="res://resources/graphics/explosions/explosion_3.png" id="3_tpb26"]
+[ext_resource type="Texture2D" uid="uid://dyh7l21amans1" path="res://resources/graphics/lights/textures/circle.png" id="4_y1xro"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_slwa6"]
 friction = 10.0

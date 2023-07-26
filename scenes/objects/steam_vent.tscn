@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://drqfk536nnpcp"]
 
-[ext_resource type="Texture2D" uid="uid://71grv3lb4rxs" path="res://resources/graphics/objects/ventilation_hole.png" id="1_4mbtp"]
-[ext_resource type="Texture2D" uid="uid://cuv22l63lw147" path="res://resources/graphics/decals/white.png" id="2_5ftc8"]
+[ext_resource type="Texture2D" uid="uid://b68p36vepr54u" path="res://resources/graphics/objects/ventilation_hole.png" id="1_4mbtp"]
+[ext_resource type="Texture2D" uid="uid://khomm077gtr8" path="res://resources/graphics/decals/white.png" id="2_5ftc8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fpouy"]
 radius = 88.278
