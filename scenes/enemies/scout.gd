@@ -14,6 +14,7 @@ func hit():
 		health -= 10
 		can_hit = false
 		$Timers/HitTimeout.start()
+		$Sprite2D.material.set_shader_parameter("progress", 1)
 	if health <= 0:
 		queue_free()
 	
@@ -41,6 +42,7 @@ func _on_attack_area_body_exited(_body):
 
 func _on_hit_timeout_timeout():
 	can_hit = true
+	$Sprite2D.material.set_shader_parameter("progress", 0)
 
 
 func _on_laser_timer_timeout():

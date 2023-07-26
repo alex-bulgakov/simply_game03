@@ -1,27 +1,42 @@
-[gd_scene load_steps=5 format=3 uid="uid://4bo63polsyuk"]
+[gd_scene load_steps=7 format=3 uid="uid://4bo63polsyuk"]
 
 [ext_resource type="Texture2D" uid="uid://doecpshxuxyye" path="res://resources/graphics/enemies/scout.png" id="1_oexp6"]
 [ext_resource type="Script" path="res://scenes/enemies/scout.gd" id="1_p7olh"]
+[ext_resource type="Shader" path="res://scenes/enemies/scout.gdshader" id="2_1eseb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_68gnf"]
+radius = 569.127
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pbo4n"]
 radius = 48.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_68gnf"]
-radius = 569.127
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m8g0h"]
+shader = ExtResource("2_1eseb")
+shader_parameter/color = Color(0.988235, 0.898039, 0.835294, 1)
+shader_parameter/progress = 0.0
 
 [node name="Scout" type="CharacterBody2D" groups=["entity", "scouts"]]
 collision_layer = 2
 collision_mask = 11
 script = ExtResource("1_p7olh")
 
+[node name="AttackArea" type="Area2D" parent="."]
+visible = false
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" groups=["entity"]]
+shape = SubResource("CircleShape2D_68gnf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-19, 0)
+shape = SubResource("CircleShape2D_pbo4n")
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_m8g0h")
 position = Vector2(17, 28)
 rotation = 1.5708
 texture = ExtResource("1_oexp6")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-19, 0)
-shape = SubResource("CircleShape2D_pbo4n")
 
 [node name="LaserSpawnPositions" type="Node2D" parent="."]
 
@@ -30,12 +45,6 @@ position = Vector2(186, -31)
 
 [node name="Marker2D2" type="Marker2D" parent="LaserSpawnPositions"]
 position = Vector2(195, 8)
-
-[node name="AttackArea" type="Area2D" parent="."]
-collision_layer = 16
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" groups=["entity"]]
-shape = SubResource("CircleShape2D_68gnf")
 
 [node name="Timers" type="Node" parent="."]
 
