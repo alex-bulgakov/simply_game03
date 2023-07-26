@@ -7,11 +7,16 @@ var right_gun_use: bool = true
 signal laser(pos, direction)
 
 var health = 30
+var can_hit: bool = true
 
 func hit():
-	health -= 10
+	if can_hit:
+		health -= 10
+		can_hit = false
+		$HitTimeout.start()
 	if health <= 0:
 		queue_free()
+	
 	
 
 func _process(_delta):
@@ -37,3 +42,7 @@ func _on_attack_area_body_exited(_body):
 
 func _on_laser_cooldown_timeout():
 	can_laser = true
+
+
+func _on_hit_timeout_timeout():
+	can_hit = true

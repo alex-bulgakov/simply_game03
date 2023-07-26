@@ -39,6 +39,9 @@ collision_layer = 16
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" groups=["entity"]]
 shape = SubResource("CircleShape2D_68gnf")
 
+[node name="HitTimeout" type="Timer" parent="."]
+
 [connection signal="timeout" from="LaserCooldown" to="." method="_on_laser_cooldown_timeout"]
 [connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
 [connection signal="body_exited" from="AttackArea" to="." method="_on_attack_area_body_exited"]
+[connection signal="timeout" from="HitTimeout" to="." method="_on_hit_timeout_timeout"]
